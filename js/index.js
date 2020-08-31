@@ -7,7 +7,7 @@ $(function(){
 
     let $plan = $.Callbacks()  //用来实现发布订阅
     $plan.add((_,baseInfo)=>{
-        console.log(baseInfo);
+        // console.log(baseInfo);
         //console.log("渲染用户信息和实现退出登录",baseInfo);
         $(".baseBox>span").html(`你好,${baseInfo.name || ''}`)
         //实现退出登录
@@ -151,7 +151,7 @@ $(function(){
             axios.get("/user/power"),
             axios.get("/user/info")
         ])
-        console.log(power);  //获取此用户的权限
+        //console.log(power);  //获取此用户的权限
         //console.log(baseInfo);   //获取用户的基本信息 
 
         power.code === 0 ? power = power.power : null
